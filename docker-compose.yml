@@ -8,14 +8,11 @@ services:
     ports:
       # Убедитесь, что порт 3001 соответствует порту, который вы указали в настройках Timeweb Cloud
       - "3001:3001"
-    volumes:
-      # Папка для хранения данных Uptime Kuma
-      - kuma-data:/app/data
+    # Убран блок volumes
     environment:
       # Опционально: установка языка интерфейса
       - LANGUAGE=ru-RU
       # Опционально: установка часового пояса
       - TZ=Europe/Moscow
 
-volumes:
-  kuma-data:
+# Убран блок volumes
